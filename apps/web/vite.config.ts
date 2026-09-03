@@ -4,7 +4,6 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  envDir: path.resolve(__dirname, '../../'), // Carrega o .env da raiz do monorepo
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
