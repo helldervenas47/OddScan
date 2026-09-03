@@ -74,13 +74,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
         <div className="modal-title-row">
-          <div>
-            <h2 className="modal-title-text">
-              {user ? 'Minha Conta' : (isRegister ? 'Nova Conta' : 'Acessar Conta')}
-            </h2>
-            <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
-              {user ? 'Sessão conectada no OddScan' : 'Sincronize preferências e histórico'}
-            </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <img src="/logo.png" alt="OddScan" style={{ height: '32px', width: 'auto', objectFit: 'contain' }} />
+            <div>
+              <h2 className="modal-title-text">
+                {user ? 'Minha Conta' : (isRegister ? 'Nova Conta' : 'Acessar Conta')}
+              </h2>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                {user ? 'Sessão conectada no OddScan' : 'Sincronize preferências e histórico'}
+              </p>
+            </div>
           </div>
           <button className="modal-close-icon" onClick={onClose}>
             <X size={16} />

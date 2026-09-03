@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, User as UserIcon, Sun, Moon, Radar, SlidersHorizontal, Ticket } from 'lucide-react';
+import { Star, User as UserIcon, Sun, Moon, SlidersHorizontal, Ticket } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useFavorites } from '../../contexts/FavoritesContext';
 import { useTheme } from '../../contexts/ThemeContext';
@@ -29,8 +29,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenFavorites, onOpenAuth }) =
   return (
     <header className="app-header">
       <div className="brand-wrapper">
-        <div className="brand-icon">
-          <Radar size={18} strokeWidth={2.5} />
+        <div className="brand-icon-logo">
+          <img src="/logo.png" alt="OddScan Logo" className="brand-logo-img" />
         </div>
         <div className="brand-title-group">
           <div className="brand-name">

@@ -162,6 +162,24 @@ body {
   box-shadow: 0 0 12px var(--accent-tech-glow);
 }
 
+.brand-icon-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.4));
+  transition: transform 0.2s ease;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.06);
+}
+
 .brand-title-group {
   display: flex;
   flex-direction: column;
