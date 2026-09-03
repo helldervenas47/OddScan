@@ -10,7 +10,7 @@
     "dev": "npm run dev --workspace=@oddscan/web",
     "worker:dev": "npm run dev --workspace=@oddscan/worker",
     "worker:run": "npm run run:once --workspace=@oddscan/worker",
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build --workspace=@oddscan/shared && npm run build --workspace=@oddscan/web",
     "test": "npm run test --workspaces --if-present"
   },
   "devDependencies": {
