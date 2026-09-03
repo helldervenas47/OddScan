@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, LogOut, UserCheck } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import { supabase, isSupabaseConfigured } from '../../lib/supabaseClient';
 
 interface AuthModalProps {
@@ -10,6 +11,7 @@ interface AuthModalProps {
 
 export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
   const { user, signInGuest, signOut } = useAuth();
+  const { theme } = useTheme();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isRegister, setIsRegister] = useState(false);
@@ -75,7 +77,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
       <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
         <div className="modal-title-row">
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img src="/logo.png" alt="OddScan" style={{ height: '32px', width: 'auto', objectFit: 'contain' }} />
+            <img 
+              src={theme === 'light' ? '/logo-light.png' : '/logo.png'} 
+              alt="OddScan" 
+              style={{ height: '32px', width: 'auto', objectFit: 'contain' }} 
+            />
             <div>
               <h2 className="modal-title-text">
                 {user ? 'Minha Conta' : (isRegister ? 'Nova Conta' : 'Acessar Conta')}

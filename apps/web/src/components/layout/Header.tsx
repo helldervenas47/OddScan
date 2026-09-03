@@ -30,7 +30,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenFavorites, onOpenAuth }) =
     <header className="app-header">
       <div className="brand-wrapper">
         <div className="brand-icon-logo">
-          <img src="/logo.png" alt="OddScan Logo" className="brand-logo-img" />
+          <img 
+            src={theme === 'light' ? '/logo-light.png' : '/logo.png'} 
+            alt="OddScan Logo" 
+            className="brand-logo-img" 
+          />
         </div>
         <div className="brand-title-group">
           <div className="brand-name">

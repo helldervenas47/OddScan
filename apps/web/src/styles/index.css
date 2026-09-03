@@ -180,6 +180,10 @@ body {
   transform: scale(1.06);
 }
 
+[data-theme="light"] .brand-logo-img {
+  content: url('/logo-light.png');
+}
+
 .brand-title-group {
   display: flex;
   flex-direction: column;
