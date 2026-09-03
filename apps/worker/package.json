@@ -1,0 +1,23 @@
+{
+  "name": "@oddscan/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/cron.ts",
+    "run:once": "tsx src/runOnce.ts"
+  },
+  "dependencies": {
+    "@oddscan/shared": "*",
+    "@supabase/supabase-js": "^2.48.1",
+    "dotenv": "^16.4.7",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.19.2",
+    "typescript": "^5.3.3"
+  }
+}
