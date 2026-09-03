@@ -14,7 +14,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@oddscan/shared": ["../../packages/shared/src/index.ts"]
+    }
   },
   "include": ["src"]
 }
