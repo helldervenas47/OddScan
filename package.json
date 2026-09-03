@@ -10,7 +10,7 @@
     "dev": "npm run dev --workspace=@oddscan/web",
     "worker:dev": "npm run dev --workspace=@oddscan/worker",
     "worker:run": "npm run run:once --workspace=@oddscan/worker",
-    "build": "cd apps/web && npx vite build",
+    "build": "npx vite build",
     "test": "npm run test --workspaces --if-present"
   },
   "devDependencies": {
